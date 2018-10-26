@@ -11,24 +11,7 @@ For implementation, Account class should be created as a super class of Checking
 2. Use Case Model
 The use case model for the banking system is given in Figure 1, followed by each use case description.
 <img width="633" alt="screen shot 2018-10-25 at 7 42 13 pm" src="https://user-images.githubusercontent.com/30754998/47538157-91a17280-d88f-11e8-93f5-2c0dc47c16de.png">
-1
-   Customer
-Bank Staff
-Timer
-   Deposit Funds
-Withdraw Funds
-View Balance
-Transfer Funds
-View Last Deposit Amount
-Cancel
-«include»
-  «include»
-«include»
-«include»
-Validate PIN
-Open Account
-Close Account
-Add Interest
+
                     Figure 1 Use Case model for Banking System
 Use Case Name: Validate PIN
 Summary: System validates customer PIN. Actor: Customer
@@ -37,9 +20,9 @@ Description:
 2. Customer enters an account number and a PIN to the system.
 3. If the account number and PIN number match those maintained in the system, system prompts customer for transaction type: Deposit, Withdrawal, Query Balance, Transfer, View Last Deposit Amount, or Cancel.
 Alternatives:
- If the customer-entered PIN and account do not match the PIN number and account in the
+* If the customer-entered PIN and account do not match the PIN number and account in the
 system, the system re-prompts for the PIN and account number.
- If the customer enters the incorrect PIN three times, the system terminates the transaction. Postcondition: Customer account and PIN have been validated.
+* If the customer enters the incorrect PIN three times, the system terminates the transaction. Postcondition: Customer account and PIN have been validated.
 Use Case Name: Deposit Funds
 Summary: Customer deposits a specific amount of funds to a valid bank account.
 2
@@ -51,7 +34,7 @@ Dependency: Include Validate PIN use case. Description:
 3. System credits the amount to the account and displays the result.
 4. System prompts customer for transaction type: Deposit, Withdrawal, Query Balance, Transfer, View Last Deposit Amount, or Cancel.
 Alternatives:
- None
+* None
 Postcondition: Customer funds have been deposited.
 Use Case Name: Withdraw Funds
 Summary: Customer withdraws a specific amount of funds from a valid bank account. Actor: ATM Customer
@@ -63,7 +46,7 @@ Description:
 4. If money is enough, system withdraws the amount from the account and displays the withdrawal result.
 5. System prompts customer for transaction type: Deposit, Withdrawal, Query Balance, Transfer, View Last Deposit Amount, or Cancel.
 Alternatives:
- If the system determines that there are insufficient funds in the customer’s account, it
+* If the system determines that there are insufficient funds in the customer’s account, it
 displays an apology.
 Postcondition: Customer funds have been withdrawn.
 Use Case Name: Query Balance
@@ -88,8 +71,8 @@ Description:
 3. If the system determines that the customer has enough funds in the from-account and that the to-account is valid, it performs the transfer.
 4. System prompts customer for transaction type: Deposit, Withdrawal, Query Balance, Transfer, View Last Deposit Amount, or Cancel.
 Alternatives:
- If the system determines that the to-account is invalid, it displays an error message.
- If the system determines that there are insufficient funds in the customer’s from-account, it
+* If the system determines that the to-account is invalid, it displays an error message.
+* If the system determines that there are insufficient funds in the customer’s from-account, it
 displays an apology.
 Postcondition: Customer funds have been transferred.
 Use Case Name: View Last Deposit Amount
@@ -112,7 +95,7 @@ Dependency: Include Validate PIN use case. Description:
 2. Customer selects Cancel.
 3. System terminates the transaction.
 Alternatives:
- None
+* None
 Postcondition: Transaction has been terminated.
 Use Case Name: Open Account
 Summary: Customer opens a bank account.
@@ -123,7 +106,7 @@ Description:
 3. If the PIN is a 4-digit number and the SSN is a 9 digit number, the system stores customer PIN.
 4. System creates an account number (5 digits) and displays it.
 Alternatives:
- None
+* None
 Postcondition: An account has been created.
 Use Case Name: Close Account Summary: Customer closes a bank account. Actor: Bank Staff
 5
@@ -134,7 +117,7 @@ Description:
 3. If the account number is valid, the system makes the balance to zero and removes the account.
 4. System displays a message about closing an account.
 Alternatives:
- None
+* None
 Postcondition: An account has been closed.
 Use Case Name: Add Interest
 Summary: System adds the interest to savings accounts. Actor: Timer
@@ -143,7 +126,7 @@ Description:
 1. Timer activates the use case.
 2. System calculates the interest for each savings account and adds it to the accounts.
 Alternatives:
- None
+* None
 Postcondition: System has added the interest to savings accounts.
 3. Account data
 An account will be created with 5-digit account number, 4-digit PIN, 9-digit SSN, balance: Checking Accounts:
