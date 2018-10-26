@@ -1,6 +1,7 @@
 # OOP-Group-Project
 
 CS2365 Due: November 26, 2018 Banking System
+
 1. Problem Description
 You are required to develop a simplified banking system in which a customer can deposit cash to a checking account, withdraw cash from the account, query the balance of an account, or transfer funds from one account to another. A transaction is initiated when a customer enter an account number (5 digits) and a user-entered PIN (4 digit personal identification number) into the system. The customer is allowed three attempts to enter the correct account number and PIN.
 If the PIN is validated satisfactorily, the customer is prompted for a withdrawal, deposit, view balance, transfer, view last deposit amount, or cancel transaction. Before a withdrawal transaction can be approved, the system determines that sufficient funds exist in the requested account. If the transaction is approved, the requested amount of cash is reduced (dispensed). Before a transfer transaction can be approved, the system determines that the source and destination accounts are available and that there are sufficient funds in the account to be debited. A bank staff can open and close a checking or savings account with customer PIN, SSN, and zero balance, and the system creates an account number.
@@ -9,6 +10,7 @@ For implementation, Account class should be created as a super class of Checking
 
 2. Use Case Model
 The use case model for the banking system is given in Figure 1, followed by each use case description.
+<img width="633" alt="screen shot 2018-10-25 at 7 42 13 pm" src="https://user-images.githubusercontent.com/30754998/47538157-91a17280-d88f-11e8-93f5-2c0dc47c16de.png">
 1
    Customer
 Bank Staff
