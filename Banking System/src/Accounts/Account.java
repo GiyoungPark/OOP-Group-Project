@@ -1,19 +1,9 @@
-/*
- * Account.java
- * Copyright (C) 2018 Chase Meyer <chase.e.meyer@gmail.com>
- *
- * Distributed under terms of the GNU license.
- */
-
 package Accounts;
 
-
-
-class Account
-{
+class Account{
     private int accountNumber, pin;
 	public Account(int accountNumber, int pin, Account_Type accountType) {
-        this.accountNumber = accountNumber;
+        this.set_accountNumber(accountNumber);
         this.pin = pin;
 	}
 
