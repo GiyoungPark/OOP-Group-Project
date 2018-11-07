@@ -1,5 +1,5 @@
 
-public class Account {
+static class Account {
     int account_number;
     Account next;
 
