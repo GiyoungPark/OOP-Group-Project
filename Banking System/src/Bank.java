@@ -63,7 +63,7 @@ public class Bank
                 tmpAccnt2 = null;
             }
             // remove Account
-            tmpAccnt2.setNext(tmpAccnt.getNext().getNext());
+            tmpAccnt2.setNext(tmpAccnt.getNext().getNext());		//should this be tmpAccnt2.setNext(tmpAccnt2.getNext().getNext()); ?
             if (tmpAccnt2.getNext() == null) {
                 this.tail = tmpAccnt2;
             } else {
