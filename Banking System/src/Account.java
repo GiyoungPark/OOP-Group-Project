@@ -36,5 +36,7 @@ static class Account {
         this.accountNumber = accountNumber;
     }
 
+    
+    //For Timer method we use (1.05)^n
 }
 
