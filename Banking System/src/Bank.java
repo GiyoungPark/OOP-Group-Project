@@ -40,7 +40,7 @@ public class Bank
     }
 
 	//Young Park Search Function
-    void searchAccount(int accountNumber) {
+    void searchAccounts(int accountNumber) {
     	Bank<Integer> tmpAccnt = head;
     	while (tmpAccnt != null && tmpAccnt.value() != data) {
         	tmpAccnt = tempAccnt.next();
