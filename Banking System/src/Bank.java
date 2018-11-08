@@ -75,7 +75,7 @@ public class Bank
         this.size--;
     }
 
-	//Young Park Search Function
+	// Search Function
     Account searchAccounts(int accountNumber) {
         Account tmpAccnt = this.head;
     	while (tmpAccnt != null && tmpAccnt.getAccountNumber() != accountNumber) {
