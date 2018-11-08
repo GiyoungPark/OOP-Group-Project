@@ -1,6 +1,6 @@
 
 static class Account {
-    // ass
+    // ass sssssss
     int account_number;
     Account next;
 
