@@ -35,15 +35,15 @@ public class Bank
                 tmpAccnt2.setPrev(tmpAccnt2.getPrev().getPrev());
             }
             tmpAccnt = null;
-	}
+        }
         this.size--;
     }
 
 	//Young Park Search Function
-    void searchAccounts(int accountNumber) {
-    	Bank<Integer> tmpAccnt = head;
-    	while (tmpAccnt != null && tmpAccnt.value() != data) {
-        	tmpAccnt = tempAccnt.next();
+    Account searchAccounts(int accountNumber) {
+        Account tmpAccnt = this.head;
+    	while (tmpAccnt != null && tmpAccnt.getAccountNumber() != accountNumber) {
+        	tmpAccnt = tempAccnt.getNext();
     	}
     	return tmpAccnt;
     }
