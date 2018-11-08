@@ -34,7 +34,7 @@ public class Bank
                 tmpAccnt2 = tmpAccnt2.getNext();
                 tmpAccnt2.setPrev(tmpAccnt2.getPrev().getPrev());
             }
-            tmpAccnt = null;        
+            tmpAccnt = null;
 	}
         this.size--;
     }
