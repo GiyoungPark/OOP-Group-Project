@@ -10,6 +10,7 @@ static class Account {
         this.accountNumber = 0;
         this.next = null;
     }
+    
 
 }
 
