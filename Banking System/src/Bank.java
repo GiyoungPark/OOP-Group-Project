@@ -21,6 +21,14 @@ public class Bank
         }else {
             Account tmpAccnt2 = tmpAccnt;
             tmpAccnt.setNext(tmpAccnt.getNext().getNext());
+		
+	//Young Park Search Function
+    void searchAccount(int accountNumber) {
+    Bank<Integer> tmpAccnt = head;
+    while (tmpAccnt != null && tmpAccnt.value() != data) {
+        tmpAccnt = tempAccnt.next();
+    }
+    return tmpAccnt;
 
 
 }
