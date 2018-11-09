@@ -6,6 +6,7 @@ public class Account {
     int accountNumber;
     int PIN;
     int SSN;
+    boolean validate = true;
     double balance;
     Account next;
     Account prev;
@@ -16,6 +17,10 @@ public class Account {
         this.prev = null;
     }
 
+    boolean validatePIN() {
+    	
+    }
+    
     int getAccountNumber(){
         return this.accountNumber;
     }
