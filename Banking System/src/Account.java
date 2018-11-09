@@ -3,6 +3,9 @@
 
 public class Account {
     int accountNumber;
+    int PIN;
+    int SSN;
+    double balance;
     Account next;
     Account prev;
 
