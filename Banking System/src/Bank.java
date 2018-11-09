@@ -17,7 +17,7 @@ public class Bank
         }
     	//Initialize new account
     	Account newAccount = new Account();
-    	
+
     	//Insert at the head of the list
     	if (index == 0) {
             newAccount.setNext(head);
@@ -39,12 +39,12 @@ public class Bank
             else {
                 temp = newAccount.getNext();
                 temp.setPrev(newAccount);
-            } 
+            }
         }
     	//Increment size
     	size++;
 	 }
-	
+
     void removeAccount(int accountNumber){
         Account tmpAccnt = searchAccount(accountNumber);
 
