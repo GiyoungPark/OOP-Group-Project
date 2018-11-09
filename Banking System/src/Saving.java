@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 public class Saving extends Account{
     boolean saving;
     int years;
@@ -18,3 +19,10 @@ public class Saving extends Account{
 
 }
 
+=======
+public class Checking extends Account {
+	boolean checking = true;
+	
+	
+}
+>>>>>>> c1de056c15e054d62e2b9a51d14011fd3ad02d4e

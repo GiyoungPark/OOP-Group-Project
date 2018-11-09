@@ -34,7 +34,7 @@ public class Bank
             newAccount.setNext(temp.getNext());
             temp.setNext(newAccount);
             newAccount.setPrev(temp);
-            if(newAccount.getNext() == NULL)
+            if(newAccount.getNext() == null)
                 tail = newAccount;
             else {
                 temp = newAccount.getNext();
@@ -46,7 +46,7 @@ public class Bank
 	 }
 	
     void removeAccount(int accountNumber){
-        Account tmpAccnt = searchAccounts(accountNumber);
+        Account tmpAccnt = searchAccount(accountNumber);
 
         // remove from head
         if (tmpAccnt == this.head){
