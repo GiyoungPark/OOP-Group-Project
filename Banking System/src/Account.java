@@ -58,7 +58,7 @@ public class Account {
     
    void Query( double balance)  
    {
-       if (validatePIN())
+       if (validate)
        {
            System.out.println(" Your balance is " + balance);
        }
