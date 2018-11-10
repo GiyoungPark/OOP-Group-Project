@@ -37,6 +37,16 @@ public class Account {
                 break;
         }
     
+   void Query( double balance)
+   {
+       if (ValidatePIN)
+       {
+           System.out.println(" Your balance is " + balance);
+       }
+
+   }
+    
+    
     int getAccountNumber(){
         return this.accountNumber;
     }
