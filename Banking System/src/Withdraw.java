@@ -3,9 +3,14 @@ import java.util.Scanner;
 //<<< header file?
 
 
-public class Withdraw extends Account{
-        boolean withdraw;
+public class Saving extends Account{
+        boolean saving;
         double amount;
+        
+                public Saving() {
+                this.savings = True;
+                amount = 0;
+                }
         
         Scanner scan = new Scanner(System.in);
         System.out.println("withdraw amount : ");
