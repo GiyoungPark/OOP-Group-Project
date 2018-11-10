@@ -1,3 +1,5 @@
+// in account as a method
+
 
 import java.util.Scanner;
 //<<< header file?
