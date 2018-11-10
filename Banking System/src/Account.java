@@ -17,6 +17,25 @@ public class Account {
         this.prev = null;
     }
     
+    
+    void withdraw() {
+        
+     Scanner scan = new Scanner(System.in);
+     System.out.println("withdraw amount : ");
+     amount = scan.nextDouble();
+        
+        
+        
+            if (amount <= 0.0) {
+            throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
+            }
+            if (amount > balance) {
+                throw new IllegalStateException("Cannot overdraw an account");
+            }
+
+            balance = (balance - amount);
+     }
+    
 
     void validatePIN() {
     	Scanner sc = new Scanner(System.in);
