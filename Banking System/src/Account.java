@@ -16,16 +16,16 @@ public class Account {
         this.next = null;
         this.prev = null;
     }
-    
-    
+
+
     void withdraw() {
-        
+
      Scanner scan = new Scanner(System.in);
      System.out.println("withdraw amount : ");
      amount = scan.nextDouble();
-        
-        
-        
+
+
+
             if (amount <= 0.0) {
             throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
             }
@@ -35,12 +35,12 @@ public class Account {
 
             balance = (balance - amount);
      }
-    
+
 
     void validatePIN() {
-    	Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int trys = 0
-            
+
         while (true){
             int askPIN = sc.nextInt();
             if (askPIN == PIN){
@@ -55,9 +55,9 @@ public class Account {
                 validatePIN = false
                 break;
         }
-    
-   void Query( double balance)  
-   {
+
+    void Query( double balance)  
+    {
        if (validate)
        {
            System.out.println(" Your balance is " + balance);
@@ -66,9 +66,43 @@ public class Account {
        {
            System.out.println(" Maximum incorrect PIN attempted");
        }
-   }
-    
-    
+    }
+      boolean transfer(int accoutNumber, double amount){
+         if (this.getAccountNumber() == accoutNumber){
+             System.Out.println("Account Number must be different from this account: " + this.accountNumber );
+             return false
+         }
+         Account tmpAccnt = new Account();
+
+         // check if we are head
+         if (this.getPrev() != null){
+             //if not make us head
+             tmpAccnt = this.getPrev();
+             while (tmpAccnt.getPrev() != null) {
+                 tmpAccnt = tmpAccnt.getPrev();
+             }
+
+         } else {
+             // set tmpAccnt value to ouselves
+             tmpAccnt = getNext();
+         }
+         // search for transfer account
+         while (tmpAccnt.getAccountNumber() != accoutNumber || tmpAccnt == null){
+             tmpAccnt = tmpAccnt.getNext();
+         }
+
+         if (amount >= this.balance){
+             System.out.println("Error: Transfer amount: $" + amount " is greater than account balance: $" this.balance);
+             return false;
+         }
+         this.balance -= amount;
+         tmpAccnt.balance += amount;
+
+         System.out.println("Amount of : $" amount " transfered to " + accoutNumber);
+         System.out.println("New balance of: $" this.balance);
+         return true;
+     }
+
     int getAccountNumber(){
         return this.accountNumber;
     }
@@ -93,7 +127,7 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    
+
     //For Timer method we use (1.05)^n
 }
 
