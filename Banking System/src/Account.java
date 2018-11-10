@@ -6,7 +6,7 @@ public class Account {
     int accountNumber;
     int PIN;
     int SSN;
-    boolean validate = true;
+    boolean validate = false;
     double balance;
     Account next;
     Account prev;
@@ -16,10 +16,26 @@ public class Account {
         this.next = null;
         this.prev = null;
     }
+    
 
-    boolean validatePIN() {
-    	
-    }
+    void validatePIN() {
+    	Scanner sc = new Scanner(System.in);
+        int trys = 0
+            
+        while (true){
+            int askPIN = sc.nextInt();
+            if (askPIN == PIN){
+                validatePIN = true;
+                break;
+            }
+            if (askPIN != PIN){
+               String.out.println("Wrong PIN");
+               trys++;
+            }
+            if (trys > 3)
+                validatePIN = false
+                break;
+        }
     
     int getAccountNumber(){
         return this.accountNumber;
@@ -45,42 +61,7 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    boolean transfer(int accoutNumber, double amount){
-        if (this.getAccountNumber() == accoutNumber){
-            System.Out.println("Account Number must be different from this account: " + this.accountNumber );
-            return false
-        }
-        Account tmpAccnt = new Account();
-
-        // check if we are head
-        if (this.getPrev() != null){
-            //if not make us head
-            tmpAccnt = this.getPrev();
-            while (tmpAccnt.getPrev() != null) {
-                tmpAccnt = tmpAccnt.getPrev();
-            }
-
-        } else {
-            // set tmpAccnt value to ouselves
-            tmpAccnt = getNext();
-        }
-        // search for transfer account
-        while (tmpAccnt.getAccountNumber() != accoutNumber || tmpAccnt == null){
-            tmpAccnt = tmpAccnt.getNext();
-        }
-
-        if (amount >= this.balance){
-            System.out.println("Error: Transfer amount: $" + amount " is greater than account balance: $" this.balance);
-            return false;
-        }
-        this.balance -= amount;
-        tmpAccnt.balance += amount;
-
-        System.out.println("Amount of : $" amount " transfered to " + accoutNumber);
-        System.out.println("New balance of: $" this.balance);
-        return true;
-    }
-
+    
     //For Timer method we use (1.05)^n
 }
 
