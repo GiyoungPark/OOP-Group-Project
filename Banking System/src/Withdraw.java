@@ -3,7 +3,7 @@ import java.util.Scanner;
 //<<< header file?
 
 
-public Withdraw extends Account{
+public class Withdraw extends Account{
         boolean withdraw;
         double amount;
         
