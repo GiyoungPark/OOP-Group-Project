@@ -8,6 +8,7 @@ public class Account {
     int SSN;
     boolean validate = false;
     double balance;
+    double lastDeposit
     Account next;
     Account prev;
 
@@ -18,6 +19,20 @@ public class Account {
     }
 
 
+    void deposit() {
+
+     Scanner scan = new Scanner(System.in);
+     System.out.println("Deposit amount: ");
+     amount = scan.nextDouble();
+        
+            if (amount <= 0.0) {
+            throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
+            }
+
+            balance = (balance + amount);
+            lastDeposit = amount;
+     }
+    
     void withdraw() {
 
      Scanner scan = new Scanner(System.in);
@@ -36,6 +51,7 @@ public class Account {
             balance = (balance - amount);
      }
 
+        
 
     void validatePIN() {
         Scanner sc = new Scanner(System.in);
