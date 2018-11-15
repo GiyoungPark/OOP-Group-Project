@@ -74,11 +74,11 @@ public class Account {
                 break;
             }
             if (askPIN != PIN){
-               String.out.println("Wrong PIN");
+               System.out.println("Wrong PIN");
                trys++;
             }
             if (trys > 3)
-                validatePIN = false
+                validatePIN = false;
                 break;
         }
     }
@@ -100,8 +100,8 @@ public class Account {
               this.validatePIN();
           
          if (this.getAccountNumber() == accoutNumber){
-             System.Out.println("Account Number must be different from this account: " + this.accountNumber );
-             return false
+             System.out.println("Account Number must be different from this account: " + this.accountNumber );
+             return false;
          }
          Account tmpAccnt = new Account();
 
@@ -130,7 +130,7 @@ public class Account {
          tmpAccnt.balance += amount;
 
          System.out.println("Amount of : $"+ amount +" transfered to " + accoutNumber);
-         System.out.println("New balance of: $" this.balance);
+         System.out.println("New balance of: $"+ this.balance);
          return true;
      }
 
