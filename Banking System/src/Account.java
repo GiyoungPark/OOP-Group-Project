@@ -108,7 +108,7 @@ public class Account {
              }
 
          } else {
-             // set tmpAccnt value to ouselves
+             // set tmpAccnt value to next account and check that
              tmpAccnt = getNext();
          }
          // search for transfer account
