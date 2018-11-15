@@ -46,12 +46,12 @@ public class SwingControlDemo{
 
       BankStaffButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            statusLabel.setText("Entering Bank Staff Console");
+            statusLabel.setText("Entering Bank Staff Console");			//needs to be changed to actually accessing bank staff file
          }
       });
       CustomerButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            statusLabel.setText("Entering Customer Console");
+            statusLabel.setText("Entering Customer Console");			//needs to be changed to actually accessing Customer file
 	 }
       });
       controlPanel.add(BankStaffButton);
