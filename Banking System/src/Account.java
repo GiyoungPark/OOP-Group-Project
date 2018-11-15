@@ -60,7 +60,7 @@ public class Account {
 
     void validatePIN() {
         Scanner sc = new Scanner(System.in);
-        int trys = 0
+        int trys = 0;
 
         while (true){
             int askPIN = sc.nextInt();
@@ -117,13 +117,13 @@ public class Account {
          }
 
          if (amount >= this.balance){
-             System.out.println("Error: Transfer amount: $" + amount " is greater than account balance: $" this.balance);
+             System.out.println("Error: Transfer amount: $" + amount +" is greater than account balance: $"+ this.balance);
              return false;
          }
          this.balance -= amount;
          tmpAccnt.balance += amount;
 
-         System.out.println("Amount of : $" amount " transfered to " + accoutNumber);
+         System.out.println("Amount of : $"+ amount +" transfered to " + accoutNumber);
          System.out.println("New balance of: $" this.balance);
          return true;
      }
