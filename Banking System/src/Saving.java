@@ -4,7 +4,7 @@ public class Saving extends Account{
     int years;
 
 	public Saving() {
-        this.savings = True;
+        this.savings = True;	//savings ? or saving?
         this.years = 0;
 	}
 
