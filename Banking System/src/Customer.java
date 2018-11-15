@@ -31,6 +31,10 @@ public class Customer extends Bank{
 				acc.withdraw();
 			}
 			elseif (menu == 5) {
+				System.out.println("To-Account: ");
+				int toAcc = sc.nextInt();
+				System.out.println("Amount: ");
+				int amount = sc.nextDouble();
 				acc.tranfer();
 			}
 			elseif (menu == 6) {
