@@ -12,7 +12,7 @@ public class SwingControlDemo{
       prepareGUI();
    }
    public static void main(String[] args){
-      SwingControlDemo  swingControlDemo = new SwingControlDemo();      
+      SwingControlDemo  swingControlDemo = new SwingControlDemo();     		// I think this needs a while loop: while(1) 
       swingControlDemo.showButtonDemo();
    }
    private void prepareGUI(){
