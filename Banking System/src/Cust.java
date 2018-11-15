@@ -1,4 +1,8 @@
-public class Customer extends Bank{
+import java.util.Scanner;
+
+class Cust extends Bank
+{
+        boolean validate;
 	Scanner sc = new Scanner(System.in);
         int menu = 0;
 	
@@ -21,23 +25,23 @@ public class Customer extends Bank{
 			if (menu == 1){
 				acc.Query();
 			}
-			elseif (menu == 2) {
+			if (menu == 2) {
 				acc.lastDepositAmount();
 			}
-			elseif (menu == 3) {
+			if (menu == 3) {
 				acc.deposit();
 			}
-			elseif (menu == 4) {
+			if (menu == 4) {
 				acc.withdraw();
 			}
-			elseif (menu == 5) {
+			if (menu == 5) {
 				System.out.println("To-Account: ");
 				int toAcc = sc.nextInt();
 				System.out.println("Amount: ");
-				int amount = sc.nextDouble();
-				acc.tranfer();
+				double amount = sc.nextDouble();
+				acc.transfer(toAcc, amount);
 			}
-			elseif (menu == 6) {
+			if (menu == 6) {
 				break;
 			}
 			else{
@@ -50,4 +54,6 @@ public class Customer extends Bank{
 	}
 	
 }
+}
+
 
