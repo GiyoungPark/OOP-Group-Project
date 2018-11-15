@@ -83,11 +83,11 @@ public class Account {
         }
     }
         
-    void Query( double balance)
+    void Query()
     {
        if (validate)
        {
-           System.out.println(" Your balance is " + balance);
+           System.out.println(" Your balance is " + this.balance);
        }
        else
        {
