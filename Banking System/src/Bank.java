@@ -46,7 +46,7 @@ public class Bank
 	 }
 
     void removeAccount(int accountNumber){
-        Account tmpAccnt = searchAccount(accountNumber);  	// this line gives me error.
+        Account tmpAccnt = searchAccounts(accountNumber);  	// this line gives me error.
 								// error: cannot find symbol
         							// Account tmpAccnt = searchAccount(accountNumber);
   								// symbol:   method searchAccount(int)
@@ -83,7 +83,7 @@ public class Bank
     Account searchAccounts(int accountNumber) {
         Account tmpAccnt = this.head;
     	while (tmpAccnt != null && tmpAccnt.getAccountNumber() != accountNumber) {
-        	tmpAccnt = tempAccnt.getNext();
+        	tmpAccnt = tmpAccnt.getNext();
     	}
     	return tmpAccnt;
     }
