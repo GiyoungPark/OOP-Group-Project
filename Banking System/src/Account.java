@@ -7,6 +7,8 @@ public class Account {
     int PIN;
     int SSN;
     boolean validate = false;
+    boolean checking = false;
+    boolean saving = false;
     double balance;
     double lastDeposit = 0;
     Account next;
