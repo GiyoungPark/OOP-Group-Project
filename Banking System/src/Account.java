@@ -89,6 +89,10 @@ public class Account {
        }
     }
       boolean transfer(int accoutNumber, double amount){
+          //validate PIN
+          if (!validate)
+              this.validatePIN();
+          
          if (this.getAccountNumber() == accoutNumber){
              System.Out.println("Account Number must be different from this account: " + this.accountNumber );
              return false
