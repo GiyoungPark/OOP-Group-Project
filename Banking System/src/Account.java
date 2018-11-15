@@ -156,7 +156,13 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-
+    void setPIN(int PIN){
+        this.PIN = PIN;
+    }
+    
+    void setSSN (int SSN){
+        this.SSN = SSN;
+    }
     //For Timer method we use (1.05)^n
 }
 
