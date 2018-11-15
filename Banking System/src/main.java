@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
  
-public class MainConsole{
+public class SwingControlDemo{
    private JFrame mainFrame;
    private JLabel headerLabel;
    private JLabel statusLabel;
@@ -46,13 +46,13 @@ public class MainConsole{
 
       BankStaffButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-			//call Bank Staff console
+            statusLabel.setText("Entering Bank Staff Console");
          }
       });
       CustomerButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-			//call customer console
-         }
+            statusLabel.setText("Entering Customer Console");
+	 }
       });
       controlPanel.add(BankStaffButton);
       controlPanel.add(CustomerButton);       
