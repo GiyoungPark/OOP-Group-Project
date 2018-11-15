@@ -56,7 +56,7 @@ public class Account {
                 break;
         }
 
-    void Query( double balance)  
+    void Query( double balance)
     {
        if (validate)
        {
