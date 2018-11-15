@@ -4,11 +4,11 @@ public class Saving extends Account{
     int years;
 
 	public Saving() {
-        this.savings = True;	//savings ? or saving?
+        this.saving = True;	
         this.years = 0;
 	}
 
-    double addInterest(){
+    void addInterest(){
         this.balance = this.balance + Math.pow(1.05, this.years);
     }
 
