@@ -76,7 +76,8 @@ public class Account {
                 validatePIN = false
                 break;
         }
-
+    }
+        
     void Query( double balance)
     {
        if (validate)
