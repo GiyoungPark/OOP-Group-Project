@@ -46,13 +46,13 @@ public class SwingControlDemo{
 
       BankStaffButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-		BankStaff.BankStaff(); //<- I think this is how you call the bank staff file
+		//BankStaff.BankStaff(); //<- I think this is how you call the bank staff file
             statusLabel.setText("Entering Bank Staff Console");		
          }
       });
       CustomerButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-		 Customer.StartMenu(acc);
+		// Customer.StartMenu(acc);
             statusLabel.setText("Entering Customer Console");			
 	 }
       });
