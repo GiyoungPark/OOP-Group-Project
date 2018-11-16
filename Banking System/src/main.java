@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
  
-public class SwingControlDemo{
+class SwingControlDemo{
    private JFrame mainFrame;
    private JLabel headerLabel;
    private JLabel statusLabel;
