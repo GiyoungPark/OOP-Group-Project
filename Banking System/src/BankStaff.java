@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 
 public class BankStaff extends Bank{
     int choice;
