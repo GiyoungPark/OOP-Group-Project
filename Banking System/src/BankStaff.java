@@ -39,8 +39,8 @@ public class BankStaff extends Bank{
 
         //add PIN
         System.out.print("Enter 4 digit PIN: ");
-        int PIN = scanner.nextInt;
-        tmpAccount.setPIN(PIN);
+        int PIN = scanner.nextInt();
+        tmpAccnt.setPIN(PIN);
 
         //verify Checking or Saving
         System.out.println("1. Checking Account ");
