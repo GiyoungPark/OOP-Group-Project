@@ -22,7 +22,7 @@ public class BankStaff extends Bank{
         }
     }
 
-    boolean addAccount(){
+    void addAccount(){
         Random rand = new Random();
 
         int accountNumber = rand.nextInt(99999) + 10000;
@@ -57,7 +57,7 @@ public class BankStaff extends Bank{
 
     }
 
-    boolean removeAccount(){
+    void removeAccount(){
         System.out.print("Enter account number: ");
         int accountNumber = scanner.nextInt();
         super.removeAccount(accountNumber);
