@@ -28,7 +28,7 @@ public class Account {
 
      Scanner scan = new Scanner(System.in);
      System.out.println("Deposit amount: ");
-     amount = scan.nextDouble();
+     double amount = scan.nextDouble();
         
             if (amount <= 0.0) {
             throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
@@ -42,7 +42,7 @@ public class Account {
 
      Scanner scan = new Scanner(System.in);
      System.out.println("withdraw amount : ");
-     amount = scan.nextDouble();
+     double amount = scan.nextDouble();
             
 
             if (amount <= 0.0) {
@@ -70,7 +70,7 @@ public class Account {
         while (true){
             int askPIN = sc.nextInt();
             if (askPIN == PIN){
-                validatePIN = true;
+                validate = true;
                 break;
             }
             if (askPIN != PIN){
@@ -78,7 +78,7 @@ public class Account {
                trys++;
             }
             if (trys > 3)
-                validatePIN = false;
+                validate = false;
                 break;
         }
     }
