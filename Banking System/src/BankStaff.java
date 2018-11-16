@@ -53,7 +53,6 @@ public class BankStaff extends Bank{
                 System.out.print("Please specify selection with 1 or 2: ");
             }
         }
-        return true;
 
     }
 
