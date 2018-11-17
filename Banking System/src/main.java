@@ -1,4 +1,7 @@
-public static void main(String[] args){
+import java.util.Scanner;
+
+  class main{
+   public static void main(String[] args){
 	   Bank bank = new Bank();
 	   Cust customer = new Cust();
 	   BankStaff bankStaff = new BankStaff();
@@ -23,11 +26,14 @@ public static void main(String[] args){
 			   //bank staff
 			}
 		   if (menu == 3){
-			   //Add interest
+                            
+                            
+                           
+			   
 			}
 		   if (menu == 4){
-                           System.out.println("Closing program");
 			   break;
 			}
 	   }
-   }				
+   }
+}
