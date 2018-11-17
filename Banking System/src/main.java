@@ -1,9 +1,6 @@
-import java.util.Scanner;
-
-  
-   public static void main(String[] args){
+public static void main(String[] args){
 	   Bank bank = new Bank();
-	   Customer customer = new Customer();
+	   Cust customer = new Cust();
 	   BankStaff bankStaff = new BankStaff();
 	   
 	   Scanner sc = new Scanner(System.in);
@@ -29,8 +26,8 @@ import java.util.Scanner;
 			   //Add interest
 			}
 		   if (menu == 4){
+                           System.out.println("Closing program");
 			   break;
 			}
 	   }
-   }
-  
+   }				
