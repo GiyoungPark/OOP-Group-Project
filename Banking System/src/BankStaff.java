@@ -5,6 +5,12 @@ public class BankStaff extends Bank{
     Scanner scanner = new Scanner(System.in);
 
 	public BankStaff() {
+        this.menueChoice();
+        if (choice == 1){
+            this.addAccount();
+        } if (choice == 2){
+            this.removeAccount();
+        }
 	}
 
     void menueChoice(){
@@ -16,8 +22,10 @@ public class BankStaff extends Bank{
             try {
                 this.choice = scanner.nextInt();
             }catch (InputMismatchException e){
-                scanner.next();
                 System.out.print("Please specify selection with 1 or 2: ");
+                scanner.next();
+            }finally {
+                return;
             }
         }
     }
@@ -33,8 +41,23 @@ public class BankStaff extends Bank{
 
 
         //add SSN
+        int SSN = 0;
         System.out.print("Enter 9 digit SSN: ");
-        int SSN = scanner.nextInt();
+        try {
+            SSN = scanner.nextInt();
+            String ssn = Integer.toString(SSN);
+            if (ssn.length() != 9){
+                throw new java.lang.RuntimeException(ssn + " " + ssn.length());
+            }
+        }catch (InputMismatchException e){
+            System.out.print("Please specify a number");
+            scanner.nextInt();
+        }catch (java.lang.RuntimeException e){
+            System.out.println("Please enter a 9 digit number: ");
+            scanner.nextInt();
+        }finally{
+            System.out.println("SSN: " + SSN);
+        }
         tmpAccnt.setSSN(SSN);
 
         //add PIN
@@ -62,7 +85,6 @@ public class BankStaff extends Bank{
         super.removeAccount(accountNumber);
     }
 
-
-
 }
+
 

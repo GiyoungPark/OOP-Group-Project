@@ -15,7 +15,7 @@ public class Account {
     Account prev;
     /* do we give variables here? (gave me build errors without those)
     double amount;
-    boolean validatePIN; */ 
+    boolean validatePIN; */
 
     Account(){
         this.accountNumber = 0;
@@ -29,7 +29,7 @@ public class Account {
      Scanner scan = new Scanner(System.in);
      System.out.println("Deposit amount: ");
      double amount = scan.nextDouble();
-        
+
             if (amount <= 0.0) {
             throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
             }
@@ -37,13 +37,13 @@ public class Account {
             balance = (balance + amount);
             lastDeposit = amount;
      }
-    
+
     void withdraw() {
 
      Scanner scan = new Scanner(System.in);
      System.out.println("withdraw amount : ");
      double amount = scan.nextDouble();
-            
+
 
             if (amount <= 0.0) {
             throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
@@ -54,14 +54,14 @@ public class Account {
 
             balance = (balance - amount);
      }
-        
+
      void lastDepositAmount() {
-             
+
              System.out.println("Last Deposit Amount: " + lastDeposit);
-            
+
      }
-       
-        
+
+
 
     void validatePIN() {
         Scanner sc = new Scanner(System.in);
@@ -82,7 +82,7 @@ public class Account {
                 break;
         }
     }
-        
+
     void Query()
     {
        if (validate)
@@ -98,7 +98,7 @@ public class Account {
           //validate PIN
           if (!validate)
               this.validatePIN();
-          
+
          if (this.getAccountNumber() == accoutNumber){
              System.out.println("Account Number must be different from this account: " + this.accountNumber );
              return false;
@@ -161,7 +161,7 @@ public class Account {
     void setPIN(int PIN){
         this.PIN = PIN;
     }
-    
+
     void setSSN (int SSN){
         this.SSN = SSN;
     }

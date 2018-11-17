@@ -1,9 +1,11 @@
+//import java.util.Scanner;
 
 public class Bank
 {
     int size;
     Account head;
     Account tail;
+    //Scanner scan = new Scanner(System.in);
 
 	public Bank() {
 
@@ -59,7 +61,7 @@ public class Bank
             tmpAccnt = null;
         } else {
         // remove form body
-            Account tmpAccnt2 = tmpAccnt.getPrev();
+           Account tmpAccnt2 = tmpAccnt.getPrev();
             // check that temp is not Account before the tail Account
             if (tmpAccnt2 == this.tail) {
                 if (this.size != 1)
@@ -85,6 +87,13 @@ public class Bank
     	while (tmpAccnt != null && tmpAccnt.getAccountNumber() != accountNumber) {
         	tmpAccnt = tmpAccnt.getNext();
     	}
+        try {
+            if (tmpAccnt == null)
+                throw new java.lang.RuntimeException("Account Number not found: " + accountNumber);
+        }catch (java.lang.RuntimeException e){
+            System.out.println(e);
+        }
+
     	return tmpAccnt;
     }
 
