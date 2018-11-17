@@ -4,6 +4,7 @@ import java.util.Scanner;
    public static void main(String[] args){
 	   Bank bank = new Bank();
 	   Customer customer = new Customer();
+	   BankStaff bankStaff = new BankStaff();
 	   
 	   Scanner sc = new Scanner(System.in);
 	   int menu = 0;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 		   System.out.println("(1) Customer");
 		   System.out.println("(2) Bank Staff");
 		   System.out.println("(3) Add Interest");
+		   System.out.println("(4) Exit");
 		   
 		   menu = sc.nextInt();
 		   
@@ -26,8 +28,9 @@ import java.util.Scanner;
 		   if (menu == 3){
 			   //Add interest
 			}
-		   
-		   
+		   if (menu == 4){
+			   break;
+			}
 	   }
    }
   
