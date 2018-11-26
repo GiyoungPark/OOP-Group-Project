@@ -1,5 +1,9 @@
 public class Checking extends Account {
-	boolean checking = true;
+    Checking next;
+    Checking prev;
 
+    Checking() {
+        super.checking = true;
+    }
 
 }

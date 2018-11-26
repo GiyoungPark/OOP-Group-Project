@@ -5,13 +5,13 @@ class Cust extends Bank
         boolean validate;
 	Scanner sc = new Scanner(System.in);
         int menu = 0;
-	
+
 	void startMenu(Account acc){
-		
+
 		acc.validatePIN();
-		
+
 		if (validate = true){
-			
+
 			while (true){
 			System.out.println("(1) View Balance");
 			System.out.println("(2) View Last Deposited Amount");
@@ -19,9 +19,9 @@ class Cust extends Bank
 			System.out.println("(4) Withdraw");
 			System.out.println("(5) Tranfer Funds to Another Account");
 			System.out.println("(6) Cancel");
-			
-			menu = sc.nextInt(); 
-			
+
+			menu = sc.nextInt();
+
 			if (menu == 1){
 				acc.Query();
 			}
@@ -47,12 +47,12 @@ class Cust extends Bank
 			else{
 				System.out.println("Invalid Input");
 			}
-			
-			
+
+
 		}
-		
+
 	}
-	
+
 }
 }
 
