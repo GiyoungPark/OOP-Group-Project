@@ -9,6 +9,13 @@ class Bank
     //Scanner scan = new Scanner(System.in);
 
 	public Bank() {
+        this.head = null;
+        this.tail = null;
+        this.chead = null;
+        this.ctail = null;
+        this.shead = null;
+        this.stail = null;
+        /*
                 ////Savings default
                 Saving temp;
 		this.addAccount(10001, true);
@@ -55,6 +62,7 @@ class Bank
 		default1.setPIN(2345);
 		default1.setSSN(456789012);
 		default1.balance = 5000;
+        */
 	}
 	//////////////////////Mehtods//////////////////////
     //boolean type determins type of accont 0 is checking, 1 is saving

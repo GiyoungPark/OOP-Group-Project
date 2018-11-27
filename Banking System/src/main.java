@@ -20,7 +20,8 @@ import java.util.Scanner;
 		   if (menu == 1){
 			   System.out.println("Account Number?");
 			   int acc = sc.nextInt();
-			   customer.startMenu(bank.searchAccounts(acc));
+               Account tmpAccnt = bank.searchAccounts(acc);
+               customer.startMenu(tmpAccnt);
 			}
 		   if (menu == 2){
 			   bankStaff.menueChoice();
