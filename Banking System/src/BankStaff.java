@@ -35,14 +35,16 @@ public class BankStaff extends Bank{
             super.addAccount(accountNumber, false);
             Checking tmpAccnt = new Checking();
             tmpAccnt = super.searchCheckings(accountNumber);
-	    //add SSN
+            //add SSN
             int SSN = 0;
             System.out.print("Enter 9 digit SSN: ");
+            System.out.println("New SSN number is: " + SSN);
             SSN = scanner.nextInt();
             tmpAccnt.setSSN(SSN);
 
             //add PIN
             System.out.print("Enter 4 digit PIN: ");
+            System.out.println("New PIN number is: " + PIN);
             int PIN = scanner.nextInt();
             tmpAccnt.setPIN(PIN);
 
@@ -50,14 +52,16 @@ public class BankStaff extends Bank{
             super.addAccount(accountNumber, true);
             Saving tmpAccnt = new Saving();
             tmpAccnt = super.searchSavings(accountNumber);
-		//add SSN
+            //add SSN
             int SSN = 0;
             System.out.print("Enter 9 digit SSN: ");
+            System.out.println("New SSN number is: " + SSN);
             SSN = scanner.nextInt();
             tmpAccnt.setSSN(SSN);
 
             //add PIN
             System.out.print("Enter 4 digit PIN: ");
+            System.out.println("New PIN number is: " + PIN);
             int PIN = scanner.nextInt();
             tmpAccnt.setPIN(PIN);
 
@@ -65,8 +69,6 @@ public class BankStaff extends Bank{
             System.out.println("ERROR bad choice");
             return;
         }
-
-       
 
     }
 
