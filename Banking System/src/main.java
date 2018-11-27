@@ -28,7 +28,7 @@ import java.util.Scanner;
 		   if (menu == 3){
 			   System.out.println("Account Number?");
 			   int acc = sc.nextInt();
-			   Saving temp = bank.searchAccounts(acc);
+			   Saving temp = bank.searchSavings(acc);
 			   System.out.println("How many Years?");
 			   int years = sc.nextInt();
 			   temp.setYears(years);
