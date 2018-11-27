@@ -15,6 +15,8 @@ public class Saving extends Account{
         this.dateOpened = Calendar.getInstance();
         this.years = 0;
         this.intrest = 0.0;
+        next = null;
+        prev = null;
 	}
 
     void addInterest(){
@@ -58,4 +60,3 @@ public class Saving extends Account{
 	    return this.prev;
     }
 }
-
