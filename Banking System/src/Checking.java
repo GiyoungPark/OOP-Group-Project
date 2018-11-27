@@ -16,4 +16,5 @@ public class Checking extends Account {
     }
     Checking getPrev(){
 	    return this.prev;
+    }
 }
