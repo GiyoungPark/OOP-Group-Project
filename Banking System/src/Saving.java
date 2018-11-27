@@ -39,6 +39,7 @@ public class Saving extends Account{
 
     void setYears(int years){
         this.years = years;
+	dateOpened.set(year);
     }
 
     void setDateOpened(int year, int month, int day ){
