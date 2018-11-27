@@ -46,6 +46,7 @@ class Cust extends Bank
 			}
 			else{
 				System.out.println("Invalid Input");
+                return;
 			}
 
 

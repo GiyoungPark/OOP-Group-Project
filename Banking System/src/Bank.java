@@ -3,6 +3,7 @@
 public class Bank
 {
     int size;
+    Account head, tail;
     Checking chead, ctail;
     Saving shead, stail;
     //Scanner scan = new Scanner(System.in);
@@ -19,11 +20,18 @@ public class Bank
     		return;
         }
     	//Initialize new account
+        Account newAllAccount = new Account();
         if (type){
             Saving newAccount = new Saving();
         }else {
             Checking newAccount = new Checking();
         }
+
+        newAllAccount.setNext(head);
+        if (size != 0)
+            head.setPrev(newAllAccount);
+        else if (size == 0)
+            tail = newAllAccount;
 
     	//Insert at the head of the list
     	if (index == 0) {
@@ -36,6 +44,7 @@ public class Bank
                     shead.setPrev(newAccount);
                 else
                     chead.setPrev(newAccount);
+            head = newAllAccount;
             if (type)
                 shead = newAccount;
             else
@@ -46,6 +55,7 @@ public class Bank
                 else
                     ctail = newAccount;
         }
+
     	//Insert anywhere else
     	else {
             if (type)
@@ -71,7 +81,6 @@ public class Bank
 	 }
 
     void removeAccount(int accountNumber){
-        Account tmpAccnt = searchAccounts(accountNumber);
         if (tmpAccnt.checking){
             Checking tmpAccnt = searchCheckings(accountNumber);
             Checking head = this.chead;

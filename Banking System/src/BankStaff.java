@@ -3,7 +3,7 @@ import java.util.*;
 public class BankStaff extends Bank{
     Scanner scanner = new Scanner(System.in);
     int choice;
- 
+
 
 	public BankStaff() {
 	}
@@ -26,10 +26,23 @@ public class BankStaff extends Bank{
 
         int accountNumber = rand.nextInt(99999) + 10000;
         System.out.println("New Account number is: " + accountNumber);
-        super.addAccount(accountNumber, 0);
-        Account tmpAccnt = new Account();
-        tmpAccnt = super.searchAccounts(accountNumber);
 
+        //verify Checking or Saving
+        System.out.println("(1) Checking Account ");
+        System.out.println("(2) Savings Account");
+        this.choice = scanner.nextInt();
+        if(choice == 1){
+            super.addAccount(accountNumber, 0, false);
+            Checking tmpAccnt = new Checking();
+            tmpAccnt = super.searchCheckings(accountNumber);
+        }else if (choice == 2) {
+            super.addAccount(accountNumber, 0, true);
+            Saving tmpAccnt = new Saving();
+            tmpAccnt = super.searchSavings(accountNumber);
+        }else{
+            System.out.println("ERROR bad choice");
+            return;
+        }
 
         //add SSN
         int SSN = 0;
@@ -42,16 +55,6 @@ public class BankStaff extends Bank{
         int PIN = scanner.nextInt();
         tmpAccnt.setPIN(PIN);
 
-        //verify Checking or Saving
-        System.out.println("(1) Checking Account ");
-        System.out.println("(2) Savings Account");
-        this.choice = scanner.nextInt();
-        if(choice == 1){
-            tmpAccnt.checking = true;
-        }else if (choice == 2) {
-            tmpAccnt.saving = false;
-        }else
-            System.out.println("ERROR bad choice");
 
     }
 
@@ -59,12 +62,6 @@ public class BankStaff extends Bank{
         System.out.print("Enter account number: ");
         int accountNumber = scanner.nextInt();
         super.removeAccount(accountNumber);
-    }
-
-    Saving searchSaving(int accountNumber){
-    }
-
-    Checking searchChecking(int accountNumber){
     }
 
 
