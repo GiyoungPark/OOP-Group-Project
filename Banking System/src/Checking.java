@@ -4,6 +4,8 @@ public class Checking extends Account {
 
     Checking() {
         super.checking = true;
+        next = null;
+        prev = null;
     }
     void setNext(Checking next){
 	    this.next = next;
