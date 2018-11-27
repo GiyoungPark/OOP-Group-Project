@@ -45,6 +45,17 @@ public class Saving extends Account{
     void setDateOpened(int year, int month, int day ){
         dateOpened.set(year,month,day);
     }
-
+    void setNext(Saving next){
+	    this.next = next;
+    }
+    Saving getNext(){
+	    return this.next;
+    }
+    void setPrev(Saving prev){
+	    this.prev = prev;
+    }
+    Saving getPrev(){
+	    return this.prev;
+    }
 }
 
