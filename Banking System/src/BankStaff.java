@@ -32,29 +32,41 @@ public class BankStaff extends Bank{
         System.out.println("(2) Savings Account");
         this.choice = scanner.nextInt();
         if(choice == 1){
-            super.addAccount(accountNumber, 0, false);
+            super.addAccount(accountNumber, false);
             Checking tmpAccnt = new Checking();
             tmpAccnt = super.searchCheckings(accountNumber);
+	    //add SSN
+            int SSN = 0;
+            System.out.print("Enter 9 digit SSN: ");
+            SSN = scanner.nextInt();
+            tmpAccnt.setSSN(SSN);
+
+            //add PIN
+            System.out.print("Enter 4 digit PIN: ");
+            int PIN = scanner.nextInt();
+            tmpAccnt.setPIN(PIN);
+
         }else if (choice == 2) {
-            super.addAccount(accountNumber, 0, true);
+            super.addAccount(accountNumber, true);
             Saving tmpAccnt = new Saving();
             tmpAccnt = super.searchSavings(accountNumber);
+		//add SSN
+            int SSN = 0;
+            System.out.print("Enter 9 digit SSN: ");
+            SSN = scanner.nextInt();
+            tmpAccnt.setSSN(SSN);
+
+            //add PIN
+            System.out.print("Enter 4 digit PIN: ");
+            int PIN = scanner.nextInt();
+            tmpAccnt.setPIN(PIN);
+
         }else{
             System.out.println("ERROR bad choice");
             return;
         }
 
-        //add SSN
-        int SSN = 0;
-        System.out.print("Enter 9 digit SSN: ");
-        SSN = scanner.nextInt();
-        tmpAccnt.setSSN(SSN);
-
-        //add PIN
-        System.out.print("Enter 4 digit PIN: ");
-        int PIN = scanner.nextInt();
-        tmpAccnt.setPIN(PIN);
-
+       
 
     }
 
