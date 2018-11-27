@@ -1,3 +1,5 @@
+package oopgroup;
+
 //import java.util.Scanner;
 
 public class Bank
@@ -7,9 +9,10 @@ public class Bank
     Checking chead, ctail;
     Saving shead, stail;
     //Scanner scan = new Scanner(System.in);
-
+    
 	public Bank() {
-		Saving temp;
+                ////Savings default
+                Saving temp;
 		this.addAccount(10001, true);
 		temp = this.searchSavings(10001);
 		temp.setPIN(1234);
@@ -29,7 +32,31 @@ public class Bank
 		temp = this.searchSavings(10004);
 		temp.setPIN(7890);
 		temp.setSSN(890123456);
-		temp.balance = 1000;		
+		temp.balance = 1000;
+                
+                ////checking default
+                ////Savings default
+                Checking default1;
+		this.addAccount(00001, false);
+		default1 = this.searchCheckings(00001);
+		default1.setPIN(5678);
+		default1.setSSN(123456789);
+		default1.balance = 300;
+		this.addAccount(00002, false);
+		default1 = this.searchCheckings(00002);
+		default1.setPIN(4567);
+		default1.setSSN(234567890);
+		default1.balance = 4000;
+		this.addAccount(00003, false);
+		default1 = this.searchCheckings(00003);
+		default1.setPIN(3456);
+		default1.setSSN(345678901);
+		default1.balance = 70;
+		this.addAccount(00004, false);
+		default1 = this.searchCheckings(00004);
+		default1.setPIN(2345);
+		default1.setSSN(456789012);
+		default1.balance = 5000;
 	}
 	//////////////////////Mehtods//////////////////////
     //boolean type determins type of accont 0 is checking, 1 is saving
@@ -189,4 +216,3 @@ public class Bank
     }
 
 }
-
