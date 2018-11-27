@@ -13,9 +13,7 @@ public class Account {
     double lastDeposit = 0;
     Account next;
     Account prev;
-    /* do we give variables here? (gave me build errors without those)
-    double amount;
-    boolean validatePIN; */
+   
 
     Account(){
         this.accountNumber = 0;
