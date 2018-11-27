@@ -9,7 +9,27 @@ public class Bank
     //Scanner scan = new Scanner(System.in);
 
 	public Bank() {
-
+		Saving temp;
+		this.addAccount(10001, true);
+		temp = this.searchSavings(10001);
+		temp.setPIN(1234);
+		temp.setSSN(567890123);
+		temp.balance = 700;
+		this.addAccount(10002, true);
+		temp = this.searchSavings(10002);
+		temp.setPIN(0123);
+		temp.setSSN(234567890);
+		temp.balance = 2000;
+		this.addAccount(10003, true);
+		temp = this.searchSavings(10003);
+		temp.setPIN(6789);
+		temp.setSSN(789012345);
+		temp.balance = 9000;
+		this.addAccount(10004, true);
+		temp = this.searchSavings(10004);
+		temp.setPIN(7890);
+		temp.setSSN(890123456);
+		temp.balance = 1000;		
 	}
 	//////////////////////Mehtods//////////////////////
     //boolean type determins type of accont 0 is checking, 1 is saving
