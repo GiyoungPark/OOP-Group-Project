@@ -26,7 +26,14 @@ import java.util.Scanner;
 			   bankStaff.menueChoice();
 			}
 		   if (menu == 3){
-			   // add interest break;
+			   System.out.println("Account Number?");
+			   int acc = sc.nextInt();
+			   Saving temp = bank.searchAccounts(acc);
+			   System.out.println("How many Years?");
+			   int years = sc.nextInt();
+			   temp.setYears(years);
+			   temp.addInterest();
+			   System.out.println("Interest Added");
 			}
 		   if (menu == 4){
 			   break;
