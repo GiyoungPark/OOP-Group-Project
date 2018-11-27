@@ -23,10 +23,13 @@ import java.util.Scanner;
 			   customer.startMenu(bank.searchAccounts(acc));
 			}
 		   if (menu == 2){
-               bankStaff.menueChoice();
+			   bankStaff.menueChoice();
 			}
 		   if (menu == 3){
-               break;
+			   // add interest break;
+			}
+		   if (menu == 4){
+			   break;
 			}
 	   }
    }
