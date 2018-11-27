@@ -19,6 +19,15 @@ public class Saving extends Account{
         prev = null;
 	}
 
+	public Saving(int accountNumber) {
+        super.accountNumber = accountNumber;
+        this.saving = true;
+        this.dateOpened = Calendar.getInstance();
+        this.years = 0;
+        this.intrest = 0.0;
+        next = null;
+        prev = null;
+	}
     void addInterest(){
         Calendar currentDate = Calendar.getInstance();
         years = currentDate.get(Calendar.YEAR) - dateOpened.get(Calendar.YEAR);

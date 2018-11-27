@@ -1,15 +1,13 @@
-package oopgroup;
-
 //import java.util.Scanner;
 
-public class Bank
+class Bank
 {
     int size;
     Account head, tail;
     Checking chead, ctail;
     Saving shead, stail;
     //Scanner scan = new Scanner(System.in);
-    
+
 	public Bank() {
                 ////Savings default
                 Saving temp;
@@ -33,7 +31,7 @@ public class Bank
 		temp.setPIN(7890);
 		temp.setSSN(890123456);
 		temp.balance = 1000;
-                
+
                 ////checking default
                 ////Savings default
                 Checking default1;
@@ -63,7 +61,7 @@ public class Bank
 	 void addAccount(int accountNumber,  boolean type) {
     	//Initialize new account
         if (type){
-            Saving newAccount = new Saving();
+            Saving newAccount = new Saving(accountNumber);
             //Insert at the head of the list
             newAccount.setNext(shead);
             if (size != 0)
@@ -73,7 +71,7 @@ public class Bank
                 stail = newAccount;
 
         }else {
-            Checking newAccount = new Checking();
+            Checking newAccount = new Checking(accountNumber);
             //Insert at the head of the list
             newAccount.setNext(chead);
             if (size != 0)
@@ -84,7 +82,7 @@ public class Bank
 
         }
 
-        Account newAllAccount = new Account();
+        Account newAllAccount = new Account(accountNumber);
     	//Insert at the head of the list
         if (size != 0)
             head.setPrev(newAllAccount);
@@ -162,7 +160,7 @@ public class Bank
             tmpAccnt = null;
         } else {
         // remove form body
-            Account tmpAccnt2 = new Account();
+            Account tmpAccnt2 = new Account(accountNumber);
 
             // check that temp is not Account before the tail Account
             if (tmpAccnt2 == tail) {
@@ -205,7 +203,7 @@ public class Bank
     }
 
     Account searchAccounts(int accountNumber) {
-        Account tmpAccnt = new Account();
+        Account tmpAccnt = head;
     	while (tmpAccnt != null && tmpAccnt.getAccountNumber() != accountNumber) {
         	tmpAccnt = tmpAccnt.getNext();
     	}

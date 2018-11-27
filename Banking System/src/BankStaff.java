@@ -38,14 +38,14 @@ public class BankStaff extends Bank{
             //add SSN
             int SSN = 0;
             System.out.print("Enter 9 digit SSN: ");
-            System.out.println("New SSN number is: " + SSN);
             SSN = scanner.nextInt();
+            System.out.println("New SSN number is: " + SSN);
             tmpAccnt.setSSN(SSN);
 
             //add PIN
             System.out.print("Enter 4 digit PIN: ");
-            System.out.println("New PIN number is: " + PIN);
             int PIN = scanner.nextInt();
+            System.out.println("New PIN number is: " + PIN);
             tmpAccnt.setPIN(PIN);
 
         }else if (choice == 2) {
@@ -55,14 +55,14 @@ public class BankStaff extends Bank{
             //add SSN
             int SSN = 0;
             System.out.print("Enter 9 digit SSN: ");
-            System.out.println("New SSN number is: " + SSN);
             SSN = scanner.nextInt();
+            System.out.println("New SSN number is: " + SSN);
             tmpAccnt.setSSN(SSN);
 
             //add PIN
             System.out.print("Enter 4 digit PIN: ");
-            System.out.println("New PIN number is: " + PIN);
             int PIN = scanner.nextInt();
+            System.out.println("New PIN number is: " + PIN);
             tmpAccnt.setPIN(PIN);
 
         }else{

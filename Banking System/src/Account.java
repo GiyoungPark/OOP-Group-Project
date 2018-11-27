@@ -22,6 +22,11 @@ public class Account {
         this.next = null;
         this.prev = null;
     }
+    Account(int accountNumber){
+        this.accountNumber = accountNumber;
+        this.next = null;
+        this.prev = null;
+    }
 
 
     void deposit() {

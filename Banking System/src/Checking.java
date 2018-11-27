@@ -7,6 +7,12 @@ public class Checking extends Account {
         next = null;
         prev = null;
     }
+    Checking(int accountNumber) {
+        super.checking = true;
+        super.accountNumber = accountNumber;
+        next = null;
+        prev = null;
+    }
     void setNext(Checking next){
 	    this.next = next;
     }
