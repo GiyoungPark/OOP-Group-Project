@@ -1,3 +1,4 @@
+// Daniel, Lora, GiYoung, Chase
 import java.util.Scanner;
 
 class Cust extends Bank
