@@ -3,7 +3,9 @@ import java.util.Scanner;
 
   class main{
    public static void main(String[] args){
-	   BankSystem bank = new BankSystem();
+	   Bank bank = new Bank();
+	   Cust customer = new Cust();
+	   BankStaff bankStaff = new BankStaff();
 
 	   Scanner sc = new Scanner(System.in);
 	   int menu = 0;
@@ -11,7 +13,8 @@ import java.util.Scanner;
 	   while (true){
 		   System.out.println("(1) Customer");
 		   System.out.println("(2) Bank Staff");
-		   System.out.println("(3) Exit");
+		   System.out.println("(3) Add Interest");
+		   System.out.println("(4) Exit");
 
 		   menu = sc.nextInt();
 
@@ -20,12 +23,22 @@ import java.util.Scanner;
 			   int acc = sc.nextInt();
                Account tmpAccnt = bank.searchAccounts(acc);
 			   System.out.println("Account Number: " + tmpAccnt.getAccountNumber());
-               bank.customerMenu(tmpAccnt);
+               customer.startMenu(tmpAccnt);
 			}
 		   if (menu == 2){
-			   bank.staffMenue();
+			   bankStaff.menueChoice();
 			}
 		   if (menu == 3){
+			   System.out.println("Account Number?");
+			   int acc = sc.nextInt();
+			   Saving temp = bank.searchSavings(acc);
+			   System.out.println("How many Years?");
+			   int years = sc.nextInt();
+			   temp.setYears(years);
+			   temp.addInterest();
+			   System.out.println("Interest Added");
+			}
+		   if (menu == 4){
 			   break;
 			}
 	   }

@@ -15,9 +15,6 @@ public class Account {
     double lastDeposit = 0;
     Account next;
     Account prev;
-
-  
-
     DecimalFormat df = new DecimalFormat("#.##");
     /* do we give variables here? (gave me build errors without those)
     double amount;

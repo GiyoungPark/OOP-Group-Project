@@ -2,7 +2,6 @@
 // Account - For verification gives 3 attempts Account # and PIN # (SSN ??)
 // We need 4 functions - View Balance, Deposit, Withdraw, Transfer
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class Account {
     int accountNumber;
@@ -15,10 +14,6 @@ public class Account {
     double lastDeposit = 0;
     Account next;
     Account prev;
-
-  
-
-    DecimalFormat df = new DecimalFormat("#.##");
     /* do we give variables here? (gave me build errors without those)
     double amount;
     boolean validatePIN; */
@@ -57,7 +52,7 @@ public class Account {
 
 
             if (amount <= 0.0) {
-                throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
+            throw new IllegalArgumentException("Cannot withdraw a negative amount or 0 ");
             }
             if (amount > balance) {
                 throw new IllegalStateException("Cannot overdraw an account");
@@ -68,7 +63,7 @@ public class Account {
 
      void lastDepositAmount() {
 
-             System.out.println("Last Deposit Amount: $ " + df.format(lastDeposit));
+             System.out.println("Last Deposit Amount: " + lastDeposit);
 
      }
 
@@ -77,9 +72,8 @@ public class Account {
     void validatePIN() {
         Scanner sc = new Scanner(System.in);
         int trys = 0;
-        System.out.println(PIN);
+
         while (true){
-            System.out.println("Enter PIN: ");
             int askPIN = sc.nextInt();
             if (askPIN == PIN){
                 validate = true;
@@ -97,18 +91,29 @@ public class Account {
 
     void Query()
     {
-       System.out.println(" Your balance is $ " + df.format(this.balance));
+       if (validate)
+       {
+           System.out.println(" Your balance is " + this.balance);
+       }
+       else
+       {
+           System.out.println(" Maximum incorrect PIN attempted");
+       }
     }
-  boolean transfer(int accoutNumber, double amount){
+      boolean transfer(int accoutNumber, double amount){
+          //validate PIN
+          if (!validate)
+              this.validatePIN();
+
          if (this.getAccountNumber() == accoutNumber){
              System.out.println("Account Number must be different from this account: " + this.accountNumber );
              return false;
          }
          Account tmpAccnt = new Account();
 
-         // check if head
+         // check if we are head
          if (this.getPrev() != null){
-             //if not make head
+             //if not make us head
              tmpAccnt = this.getPrev();
              while (tmpAccnt.getPrev() != null) {
                  tmpAccnt = tmpAccnt.getPrev();
@@ -124,14 +129,14 @@ public class Account {
          }
 
          if (amount >= this.balance){
-             System.out.println("Error: Transfer amount: $" + df.format(amount) +" is greater than account balance: $"+ df.format(this.balance));
+             System.out.println("Error: Transfer amount: $" + amount +" is greater than account balance: $"+ this.balance);
              return false;
          }
          this.balance -= amount;
          tmpAccnt.balance += amount;
 
-         System.out.println("Amount of : $"+ df.format(amount) +" transfered to " + accoutNumber);
-         System.out.println("New balance of: $"+ df.format(this.balance));
+         System.out.println("Amount of : $"+ amount +" transfered to " + accoutNumber);
+         System.out.println("New balance of: $"+ this.balance);
          return true;
      }
 
